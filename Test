@@ -1,0 +1,30 @@
+/*Test coding for manipulation in SQL*/
+
+
+SELECT 
+    first_name, last_name
+FROM
+    employees;
+
+/* here start means all */    
+SELECT * FROM employees;
+
+SELECT * FROM employees WHERE first_name = 'Denis';
+
+SELECT * FROM employees WHERE first_name = 'Elvis';
+
+
+
+/* AND = combine two condiotions */
+
+SELECT * FROM employees WHERE first_name = 'Denis' AND gender = 'M';
+
+
+/* OR = meet one of the conditions */
+SELECT * FROM employees WHERE first_name = 'Denis' AND first_name = 'Elvis';
+
+/* Operator Precedence (AND > OR) */
+SELECT * FROM employees WHERE first_name = 'Denis' AND (gender = 'M' OR gender='F');
+
+/* IN ( more than 2 conditions) */
+SELECT * FROM employees WHERE first_name IN ('Cathie', 'Mark', 'Nathan');
