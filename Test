@@ -1,4 +1,6 @@
-/*Test coding for manipulation in SQL*/
+/*SELECT STATEMENT Queries */
+
+/* Control + B = to clean the query*/
 
 
 SELECT 
@@ -6,7 +8,7 @@ SELECT
 FROM
     employees;
 
-/* here start means all */    
+/* here, '*' means all */    
 SELECT * FROM employees;
 
 SELECT * FROM employees WHERE first_name = 'Denis';
@@ -57,5 +59,53 @@ SELECT * FROM employees WHERE hire_date NOT BETWEEN '1990-01-01' AND '2000-01-01
 SELECT * FROM employees WHERE first_name IS NOT NULL;
 
 SELECT * FROM employees WHERE first_name IS  NULL;
+
+
+/* <>, != Not Equal operators  */
+SELECT * FROM employees WHERE first_name != 'Mark';
+
+SELECT * FROM employees WHERE first_name <> 'Mark';
+
+/* SELECT Distinct  */
+SELECT DISTINCT gender FROM employees;
+
+/* COUNT() 카운트 다음에 띄어쓰기 X */
+SELECT COUNT(emp_no) FROM employees;
+
+/* COUNT(DISTINCT ~~~) how many distinct values */
+SELECT COUNT(Distinct first_name) FROM employees;
+
+/* ORDER BY (in sequence) [ASC=Ascending, DESC=Descending]*/
+SELECT * FROM employees ORDER BY first_name;
+
+SELECT * FROM employees ORDER BY first_name ASC;
+
+SELECT * FROM employees ORDER BY first_name DESC;
+
+SELECT * FROM employees ORDER BY first_name, last_name DESC;
+
+/* GROUP BY,  #GROUP BY vs SELECT DISTINCT = sorted in a different way*/
+SELECT first_name, COUNT(first_name) FROM employees GROUP BY first_name ORDER BY first_name DESC;
+
+/* Aliases (AS)  = rename the selection of the query */
+SELECT first_name, COUNT(first_name) AS names_count FROM employees GROUP BY first_name ORDER BY first_name DESC;
+
+/* HAVING (similar to WHERE, but applied to the GROUP BY block) # WHERE cannot use aggregate functions with within its conditions*/
+/* HAVING should come after the GROUP BY block */
+SELECT first_name, COUNT(first_name) AS names_count FROM employees GROUP BY first_name HAVING COUNT(first_name) >250 ORDER BY first_name;
+
+/* Select all employees whose average salary is higher than $120,000 per annum. */
+SELECT emp_no, AVG(salary) FROM salaries GROUP BY emp_no Having AVG(salary) > 120000 ORDER BY emp_no;
+
+/* When to use WHERE, HAVING */
+SELECT 
+    first_name, COUNT(first_name) AS names_count
+FROM
+    employees
+WHERE
+    hire_date > '1990-01-01'
+GROUP BY first_name
+HAVING COUNT(first_name) < 200
+ORDER BY first_name DESC;
 
 
