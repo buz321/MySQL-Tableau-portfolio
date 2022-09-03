@@ -28,3 +28,34 @@ SELECT * FROM employees WHERE first_name = 'Denis' AND (gender = 'M' OR gender='
 
 /* IN ( more than 2 conditions) */
 SELECT * FROM employees WHERE first_name IN ('Cathie', 'Mark', 'Nathan');
+
+/* NOT IN (exclude selected samples */
+SELECT * FROM employees WHERE first_name NOT IN ('John', 'Mark', 'Jacob');
+
+/* LIKE % = sequence, _ = single character         ----- Cap deson't matter in between ''----     */
+SELECT * FROM employees WHERE first_name LIKE ('AR%');
+SELECT * FROM employees WHERE first_name LIKE ('%AR%');
+SELECT * FROM employees WHERE first_name LIKE ('%AR');
+SELECT * FROM employees WHERE first_name LIKE ('MAR_');
+
+
+SELECT * FROM employees WHERE first_name LIKE ('MARK%');
+
+SELECT * FROM employees WHERE hire_date LIKE('%2000%');
+
+SELECT * FROM employees WHERE emp_no LIKE ('1000_');
+
+/* NOT LIKE (exclude) */
+SELECT * FROM employees WHERE first_name NOT LIKE ('%MAR%');
+
+/* BETWEEN ~ AND (범위 e.g 날짜, 숫자, string) */
+SELECT * FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '2000-01-01';
+
+SELECT * FROM employees WHERE hire_date NOT BETWEEN '1990-01-01' AND '2000-01-01';
+
+/* IS NOT NULL & IS NULL  */
+SELECT * FROM employees WHERE first_name IS NOT NULL;
+
+SELECT * FROM employees WHERE first_name IS  NULL;
+
+
