@@ -7,16 +7,17 @@
 
 /* a trigger is a MySQL object that can "trigger" a specific action or calculation 'before' or 'after' an INSERT, UPDATE, or DELETE statement has been executed */
 
-# First, in case you are just starting Workbench, select “Employees” as your default database.
+/* First, in case you are just starting Workbench, select “Employees” as your default database. */
 USE employees;
 
-# Then, execute a COMMIT statement, because the triggers we are about to create will make some changes to 
-# the state of the data in our database. At the end of the exercise, we will ROLLBACK up to the moment of this COMMIT.  
+/* # Then, execute a COMMIT statement, because the triggers we are about to create will make some changes to 
+# the state of the data in our database. At the end of the exercise, we will ROLLBACK up to the moment of this COMMIT.  */
 COMMIT;
 
-# We said triggers are a type of stored program. Well, one could say the syntax resembles that of stored procedures, couldn’t they?
+/* We said triggers are a type of stored program. Well, one could say the syntax resembles that of stored procedures */
 
 # BEFORE INSERT
+
 DELIMITER $$
 
 CREATE TRIGGER before_salaries_insert
@@ -64,7 +65,6 @@ DELIMITER ;
 # The third part of the syntax regards the SET keyword. As you already know, it is used whenever a value has to be assigned to a 
 # certain variable. Here, the variable is the newly inserted salary, and the value to be assigned is 0. 
 
-# All right! Let’s execute this query. 
 # BEFORE INSERT
 DELIMITER $$
 
@@ -98,10 +98,6 @@ FROM
 WHERE
     emp_no = '10001';
     
-# You can see that the “before_salaries_insert” trigger was activated automatically. It corrected the value of minus 92,891 
-# we tried to insert. 
-
-# Fantastic!
 
 # Now, let’s look at a BEFORE UPDATE trigger. The code is similar to the one of the trigger we created above, with two 
 # substantial differences.
@@ -169,19 +165,11 @@ WHERE
     emp_no = '10001'
         AND from_date = '2010-06-22';
         
-# No, it wasn’t. Everything remained intact. So, we can conclude that only an update with a salary higher than zero dollars per year 
-# would be implemented.
+# Everything remained intact. So, we can conclude that only an update with a salary higher than zero dollars per year would be implemented.
 
 
-# All right. For the moment, you know you have created only two triggers. But how could you prove that to someone who is seeing your 
-# script for the first time?
-# Well, in the ‘info’ section of the “employees” database, you can find a tab related to triggers. When you click on its name, 
-# MySQL will show you the name, the related event, table, timing, and other characteristics regarding each trigger currently in use.  
 
-# Awesome!
 
-# Let’s introduce you to another interesting fact about MySQL. You already know there are pre-defined system variables, but system 
-# functions exist too! 
 # System functions can also be called built-in functions. 
 # Often applied in practice, they provide data related to the moment of the execution of a certain query.
 
