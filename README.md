@@ -1,1 +1,1 @@
-Useful SQL queries
+Useful SQL queries / questions
