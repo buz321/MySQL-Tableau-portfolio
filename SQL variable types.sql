@@ -1,6 +1,6 @@
 /* Session variable = a variable that exists only for the session in which you are operating */
 
-/* Gloval variable = system variables are required: 
+/* Global variable = system variables are required: 
 .max_connections() - indicates the maximum number of connections to a server that can be established at a certain point in time,
 .max_join_size() - sets the maximum memory space allocated for the joins created by a certain connection */
 
