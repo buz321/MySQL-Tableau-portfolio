@@ -57,7 +57,7 @@ ORDER BY dm.emp_no, calendar_year;
 # Task 3
 Compare the average salary of female versus male employees in the entire company until year 2002, and add a filter allowing you to see that per each department.
 
-/*when you are using a measure in the "Rows" section in Tableau, you must always aggregate the data in a certain way*/
+(*when you are using a measure in the "Rows" section in Tableau, you must always aggregate the data in a certain way*)
 
 (note: you can select each departments in Tableau)
 
