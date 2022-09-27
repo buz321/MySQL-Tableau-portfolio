@@ -21,9 +21,9 @@ HAVING calendar_year >= 1990;
 # Task 2
 Compare the number of male managers to the number of female managers from different departments for each year, starting from 1990.
 
-/*Tableau automatically aggregates the numeric values of a field*/
+(*Tableau automatically aggregates the numeric values of a field*)
 
-(hovering over certain parts of the visualisation allows you to obtain specific quantitative information)
+(*hovering over certain parts of the visualisation allows you to obtain specific quantitative information*)
 
 ``` MySQL
 SELECT 
