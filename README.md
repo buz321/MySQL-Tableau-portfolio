@@ -1,9 +1,8 @@
 # Useful SQL queries / questions
 
-Tableau Tasks
-=============
-Task 1
-~~~~~~~~~~~~
+# Tableau Tasks
+
+# Task 1
 A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.
 ``` MySQL
 SELECT 
