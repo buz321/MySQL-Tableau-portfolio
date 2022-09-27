@@ -10,7 +10,7 @@ A visualization that provides a breakdown between the male and female employees 
 # Task 2
 Compare the number of male managers to the number of female managers from different departments for each year, starting from 1990.
 
-''' MySQL
+``` MySQL
 SELECT 
     d.dept_name,
     ee.gender,
@@ -35,6 +35,6 @@ FROM
         JOIN 
     t_employees ee ON dm.emp_no = ee.emp_no
 ORDER BY dm.emp_no, calendar_year;
-'''
+```
 
 ![Chart 2](https://user-images.githubusercontent.com/107760647/192645106-0532022a-5385-4166-8483-bc6b01cac4ea.png)
