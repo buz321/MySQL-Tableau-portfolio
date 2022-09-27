@@ -60,7 +60,7 @@ Compare the average salary of female versus male employees in the entire company
 
 (*when you are using a measure in the "Rows" section in Tableau, you must always aggregate the data in a certain way*)
 
-(note: you can select each departments in Tableau)
+(note: you can select each department in Tableau)
 
 ``` MySQL
 SELECT 
