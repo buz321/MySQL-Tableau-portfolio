@@ -3,13 +3,25 @@
 # Tableau Tasks
 # Task 1
 A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.
-
+``` MySQL
+SELECT 
+    YEAR(d.from_date) AS calendar_year,
+    e.gender,    
+    COUNT(e.emp_no) AS num_of_employees
+FROM     
+     t_employees e         
+          JOIN    
+     t_dept_emp d ON d.emp_no = e.emp_no
+GROUP BY calendar_year , e.gender 
+HAVING calendar_year >= 1990;
+```
 
 ![Task 1](https://user-images.githubusercontent.com/107760647/192154919-b9125dae-b211-446a-8291-f3754624313d.png)
 
 # Task 2
 Compare the number of male managers to the number of female managers from different departments for each year, starting from 1990.
-
+(Tableau automatically aggregates the numeric values of a field)
+(hovering over certain parts of the visualisation allows you to obtain specific quantitative information)
 ``` MySQL
 SELECT 
     d.dept_name,
