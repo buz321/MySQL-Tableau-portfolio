@@ -2,7 +2,7 @@
 
 # Tableau Tasks
 
-# Task 1
+## Task 1
 A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.
 ``` MySQL
 SELECT 
@@ -19,7 +19,7 @@ HAVING calendar_year >= 1990;
 
 ![Task 1](https://user-images.githubusercontent.com/107760647/192154919-b9125dae-b211-446a-8291-f3754624313d.png)
 
-# Task 2
+## Task 2
 Compare the number of male managers to the number of female managers from different departments for each year, starting from 1990.
 
 (*Tableau automatically aggregates the numeric values of a field*)
@@ -55,7 +55,7 @@ ORDER BY dm.emp_no, calendar_year;
 
 ![Chart 2](https://user-images.githubusercontent.com/107760647/192645106-0532022a-5385-4166-8483-bc6b01cac4ea.png)
 
-# Task 3
+## Task 3
 Compare the average salary of female versus male employees in the entire company until year 2002, and add a filter allowing you to see that per each department.
 
 (*when you are using a measure in the "Rows" section in Tableau, you must always aggregate the data in a certain way*)
