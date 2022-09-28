@@ -115,3 +115,6 @@ CALL filter_salary(50000,90000);
 ```
 
 ![Chart 4](https://user-images.githubusercontent.com/107760647/192895140-e2b30881-aa51-4fa5-ac89-e9eca2802526.png)
+
+## Dash Board
+![대시보드 1](https://user-images.githubusercontent.com/107760647/192897232-e1da5ba1-c70c-4092-85d2-4778f1d5c81a.png)
